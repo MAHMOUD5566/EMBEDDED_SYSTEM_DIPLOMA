@@ -22,7 +22,7 @@ int main()
 		if(x >=65 & x <=90 || x >=97 & x <=122)
 			printf("\n%c is an alphabet",x);
 		else
-			printf("\%c is not alphabet",x);
+			printf("\n%c is not alphabet",x);
 	}
 	return 0;
 }
