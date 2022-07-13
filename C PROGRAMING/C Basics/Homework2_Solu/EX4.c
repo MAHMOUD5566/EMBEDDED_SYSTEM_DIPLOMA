@@ -22,6 +22,6 @@ int main()
 	else if(n == 0)
 		printf("\nyou entered 0");
 	else
-		printf("\%f is negative",n);
+		printf("\n%f is negative",n);
 	return 0;
 }
