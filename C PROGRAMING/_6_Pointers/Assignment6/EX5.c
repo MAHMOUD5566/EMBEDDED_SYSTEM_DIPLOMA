@@ -9,18 +9,20 @@
  ============================================================================
  */
 #include <stdio.h>
-#define pi 3.142857
-#define area(x) (pi*x*x)
 
+
+struct Sdata
+{
+	char name[20];
+	int ID;
+};
 int main()
 {
-	int r;
-	float area;
-	printf("ENTER RADIAS: ");
-	fflush(stdin);	fflush(stdout);
-	scanf("%d",&r);
-	area = area(r);
-	printf("\nAREA IS : %.2f",area);
+	struct Sdata emp1 = {"aaa",10}, emp2 = {"Alex",1002}, emp3 = {"ccc",30}, emp4 = {"ddd",40};
+	struct Sdata *arr[] = {&emp1, &emp2, &emp3, &emp4};
+	struct Sdata ( *(*ptr)[4] ) = & arr;
+	printf("IMOPLOYEE NAME: %s\n",(*(*ptr+1))->name);
+	printf("EMPLOYEE ID:% d",(*(*ptr+1))->ID);
 	return 0;
 }
 
